@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Graphics</title>
+
+  <style>
+  * {
+  box-sizing: border-box;
+}
+     body {
+      margin: 0;
+      padding: 0;
+      background-color: #141414;
+    }
+   #logo-container {
+  text-align: center;
+  margin: 0 auto; /* Center the logo container horizontally */
+}
+
+#logo {
+  height: 100px;
+  width: auto; /* Allow the width to adjust proportionally */
+  margin-top: 10px;
+}
+
+#head {
+  max-width: 100%; /* Ensure the header image doesn't exceed its container */
+  height: 110px; /* Allow the height to adjust proportionally */
+}
+
+
+    /*.topbar {
+    	margin: 0;
+    	padding: 0;
+      height: 150px;
+      width: 100%;
+      background-color: black;
+      }*/
+
+    .navbar {
+      height: 40px;
+      width: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: sans-serif;
+      font-size: 17px;
+      margin: 0 25px;
+    }
+    .side{
+    	color: white;
+    	float: left;
+    	width: 150px;
+    }
+
+    
+
+    #heading {
+      font-family: sans-serif;
+      font-size: 65px;
+      color: white;
+      text-align: center;
+    
+    }
+
+    /* Style the dropdown content (hidden by default) */
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+   
+      padding: 10px;
+    }
+
+    /* Show the dropdown content when the dropdown link is hovered */
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Style the list items in the dropdown */
+    nav .dropdown-content a {
+      display: block;
+      color: white;
+      background-color: ;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    /* Change the background color of the selected item in the dropdown */
+    nav .dropdown-content a:hover {
+      background-color: #141414;
+    }
+
+    #img{
+    	border: 2px solid white;
+      padding: 250px;
+    }
+
+    .sideimg{ 
+      font-size: 30px;
+    	width: 30px;
+    	padding: 25px;
+    	display: inline-block; 
+    	background-color:#9e0212;
+    }
+#img1{
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 20px;
+  height: 700px;
+  width: 900px;
+}
+
+#subheadbor{
+	
+	display: inline;
+}
+
+#subhead{
+	font-family: 'Roboto', sans-serif;
+	font-size: 50px;
+	padding: 40px;
+
+}
+
+.pic{
+	height: 500px;
+	width: 1000px;
+	max-width: 100%;
+}
+.responsive{
+width:100%;
+height:auto;
+}
+#p{
+	font-size: 20px;
+}
+
+#video{
+	height: 600px;
+	width: 1000px;
+}
+
+#subp{
+	padding-left: 100px;
+	font-size: 20px;
+}
+
+#subp2{
+	padding-right: 500px;
+	font-size: 17px;
+}
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+[class*="col-"] {
+  width: 100%;
+  padding-top:5px;
+}
+
+@media only screen and (min-width: 300px) {
+   div.eg{
+   display:none;
+   }
+   /*div.hr{
+   display:none;
+   }
+   div.vertical-line{
+   display:none;
+   }*/
+   .topbar{
+   width:100%;}
+   .col-3-9{
+   width:100%
+   padding-left:0;
+   }
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* For desktop: */
+    .col-1 {width: 0;}
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+    .container 
+{   * Set your desired maximum width */
+    margin: 0 auto;    /* Center the container horizontally */
+       /* Add some padding to the container */
+    position: relative; /* Needed for positioning the vertical line */
+  }
+  .vertical-line {
+    margin-top: 390px;
+    margin-right: 100px;
+    border-left: 3px solid white; /* Change color as needed */
+    height: 85%;
+    position: absolute;
+    top: 0;
+    right: 400px; 
+
+    /* Position the line at the center of the container */
+ 
+  }
+  .hr{
+    margin-left: 1017px;
+    border-bottom: 3px solid white;
+
+  }
+  #form{
+    font-size: 30px;
+ padding-left: 100px;
+  }
+  label{
+    margin-top: 20px;
+    padding: 20px;
+    padding-left: 150px;
+  }
+  
+  input[type]{
+    background-color: black;
+    block-size: 30px;
+    padding-right: 50px;
+    color: white;
+  }
+  textarea{
+    background-color: black;
+    padding-left: 100px;
+    margin-left: 170px;
+    color: white;
+  }
+
+  button{
+    margin-bottom: 20px;
+    margin-top: 20PX;
+    font-size: 20px;
+    margin-left: 260px;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+  }
+  #foot{
+    padding-left: 100px;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <header>
+  <div class="topbar col-s-12">
+    <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">
+      <div id="logo-container">
+        <img src="./logo.png" id="logo" alt="Logo">
+        <img src="./head.png" id="head" alt="Header Image">
+      </div>
+    </a>
+  </div>
+  <div class="col-12 navbar">
+    <nav>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">HOME</a>
+        <div class="dropdown">
+          <a href="#file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">GAMES</a>
+          <div class="dropdown-content">
+            <a href="#scrollto1" >1. The Witcher</a>
+            <a href="#scrollto2" >2. Red Dead Redemption 2</a>
+            <a href="#scrollto3" >3. Assassin's Creed Valhalla</a>
+            <a href="#scrollto4" >4. God Of War</a>
+            <a href="#scrollto5" >5. Cyberpunk 2077</a>
+          </div>
+        </div>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/spl.html">MENTIONS</a>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/buy.html">BUY GAMES</a>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/contact.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+  <font color="white">
+    //<div class="convas" Style={"width:100%;"}> 
+    <img id="img1" src="./headimage.png" align="left" class="col-s-12" >
+    <h1 id="heading">CONTACT US</h1>
+   
+       <div class="hr"></div>
+    <div class="vertical-line" align="left"></div><br><br>
+    <div id="form">
+  <form onsubmit="return validateForm()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" placeholder="Enter your username" onblur="return empty(this)" required>*<br>
+    <span id="msg" style="color: red; font-size: 20px; padding-left:200px;"></span>
+  </div>
+<div>
+<label for="mail">Email:</label>
+  <input type="text" name="mail" id="mail" placeholder="Enter your Email id" oninput="validateEMAIL()" required>*<br>
+  <span id="mailmsg" style="color: red; font-size: 20px; padding-left:200px;"></span></div>
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" placeholder="Enter your password" required>*<br><br>
+  <div>
+  <label for="mob">Phone Number :</label>
+  <input type="text" id="mob" oninput="mobileNo()" required/><br>
+    <span id="mobmsg" style="color: red; font-size: 20px; padding-left:200px;"></span>
+
+  </div>
+  <br><label for="fb">Feedback</label><br>
+  <textarea id= "fb"rows="10" cols="30"></textarea>
+  <button type="submit">Send</button>
+</form>
+<footer align = 'center' id="contact" style="padding: 30px;">
+  <nav id="foot">
+  <a href="mailto:harinikumar1325@gmail.com" target="_blank"><img src="./maillogo.png" height="30px"></a>
+  <span>&nbsp;&nbsp;&nbsp;</span>
+  <a href="https://www.instagram.com/harini_1113_" target="_blank"><img src="./iglogo.png" height="30px"></a>
+<span>&nbsp;&nbsp;&nbsp;</span>
+  <a href="tel:+91 7358683769"><img src="./phonelogo.png" height="30px"></a>
+</nav></div>
+</footer>
+</div>
+  </div>
+  <script>
+    function empty(x) {
+        const msg = document.getElementById("msg");
+        if (x.value === "") {
+		 document.getElementById("username").setCustomValidity("Please enter this field");
+            msg.textContent = "*Fill it please";
+            x.style.border = "1px solid red"; 
+            return false;
+        } else {
+            msg.textContent = "";
+            x.style.border = ""; 
+            return true;
+        }
+    }
+	
+	function validateEMAIL() {
+    const emailInput = document.getElementById("mail");
+    const mailmsg = document.getElementById("mailmsg");
+
+    if (emailInput.value === "") {
+        mailmsg.textContent = "*Fill it please";
+        mailmsg.style.color = "red"; // Set text color to red
+        emailInput.style.border = "1px solid red";
+        return false;
+    } else {
+        mailmsg.textContent = "";
+        emailInput.style.border = "";
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (emailPattern.test(emailInput.value)) {
+        // Valid email
+        mailmsg.textContent = "";
+        return true;
+    } else {
+        // Invalid email
+        mailmsg.textContent = "Please enter a valid Email Address";
+        mailmsg.style.color = "red"; // Set text color to red
+        return false;
+    }
+}
+
+
+function mobileNo() {
+    const mob = document.getElementById("mob");
+    const mobmsg = document.getElementById("mobmsg");
+    const pattern = /^[0-9]{10}$/;
+
+    if (mob.value === "") {
+        mobmsg.textContent = "Please fill in this field.";
+        mobmsg.style.color = "red"; // Set text color to red
+        mob.style.border = "1px solid red";
+        return false;
+    } else if (pattern.test(mob.value)) {
+        // Valid mobile number
+        mobmsg.textContent = "";
+        mob.style.border = "";
+        return true;
+    } else {
+        // Invalid mobile number
+        mobmsg.textContent = "Please enter a valid 10-digit mobile number.";
+        mobmsg.style.color = "red"; // Set text color to red
+        mob.style.border = "1px solid red";
+        return false;
+    }
+}
+
+function validateForm(){
+		 alert("Successfully submitted!!!!!");
+	 }
+
+
+
+		
+</script>
+
+</body>
+</html>

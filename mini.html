@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Graphics</title>
+
+  <style>
+  * {
+  box-sizing: border-box;
+}
+     body {
+      margin: 0;
+      padding: 0;
+      background-color: #141414;
+    }
+	#logo {
+  height: 100px;
+  width: 110px; /* Allow the width to adjust proportionally */
+  margin-top: 10px;
+}
+
+#headimg {
+  max-width: 70%; /* Ensure the header image doesn't exceed its container */
+  height: 110px; /* Allow the height to adjust proportionally */
+}
+
+    .side{
+    	color: white;
+    	float: left;
+    	width: 150px;
+    }
+
+    .pic {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:100%;
+  }
+
+    #heading {
+      font-family: sans-serif;
+      font-size: 65px;
+      color: white;
+      text-align: center;
+    
+    }
+
+    /* Style the dropdown content (hidden by default) */
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+   
+      padding: 10px;
+    }
+
+    /* Show the dropdown content when the dropdown link is hovered */
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Style the list items in the dropdown */
+    nav .dropdown-content a {
+      display: block;
+      color: white;
+      background-color: ;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    /* Change the background color of the selected item in the dropdown */
+    nav .dropdown-content a:hover {
+      background-color: #141414;
+    }
+
+    #img{
+    	border: 2px solid white;
+      padding: 250px;
+    }
+
+    .sideimg{ 
+      font-size: 30px;
+    	width: 30px;
+    	padding: 25px;
+    	display: inline-block; 
+    	background-color:#9e0212;
+    }
+#img1	
+{
+	width: 100%;
+}
+
+#subheadbor{
+	
+	display: inline;
+}
+
+#subhead{
+	font-family: 'Roboto', sans-serif;
+	font-size: 5vw;
+	padding: 40px;
+
+}
+
+
+.responsive{
+width:100%;
+height:auto;
+}
+#p{
+	font-size: 20px;
+}
+
+  /* CSS for responsive videos */
+  #video {
+    max-width: 100%;
+    height: auto;
+  }
+
+#subp{
+	padding-left: 100px;
+	font-size: 20px;
+}
+
+#subp2{
+	padding-right: 500px;
+	font-size: 17px;
+}
+#logo-container {
+  text-align: center; /* Center the content horizontally */
+}
+
+#logo, #head {
+  height: auto;
+  max-width: 100%; /* Ensure the images don't exceed their container */
+  display: inline-block; /* Make the images inline-block */
+  vertical-align: middle; /* Vertically align the images to the middle */
+}
+
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+[class*="col-"] {
+  width: 100%;
+  padding-top:5px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Your styles for screens less than 768px wide go here */
+  .mid{
+  width:100%;
+  margin-left:0px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 17px;
+    margin: 0 15px;
+  }
+  div.eg {
+    display: none;
+  }
+  .topbar {
+    width: 100%;
+    height: auto;
+  }
+  .col-3-9 {
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  
+  .navbar {
+    height: auto;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#p{
+	font-size:3vw;
+	}
+  /* For small screens (less than 768px wide): */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+
+@media only screen and (min-width: 768px) {
+.mid{
+width:100%; 
+margin-left:250px;}
+/*.topbar {
+    	margin: 0;
+  ss  	padding: 0;
+      height: 150px;
+      width: 100%;
+      background-color: black;
+      }*/
+
+.navbar {
+      height: 40px;
+      width: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+	nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: sans-serif;
+      font-size: 17px;
+      margin: 0 25px;
+    }
+	#p{
+	font-size:20px;
+	}
+
+#head {
+  max-width: 100%; /* Ensure the header image doesn't exceed its container */
+  height: 110px; /* Allow the height to adjust proportionally */
+}
+  /* For desktop: */
+    .col-1 {width: 0;}
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+  <div class="topbar col-s-12">
+    <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">
+      <div id="logo-container">
+        <img src="./logo.png" id="logo" alt="Logo">
+        <img src="./head.png" id="head" alt="Header Image">
+      </div>
+    </a>
+  </div>
+  <div class="col-12 navbar">
+    <nav>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">HOME</a>
+        <div class="dropdown">
+          <a href="#file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">GAMES</a>
+          <div class="dropdown-content">
+            <a href="#scrollto1" >1. The Witcher</a>
+            <a href="#scrollto2" >2. Red Dead Redemption 2</a>
+            <a href="#scrollto3" >3. Assassin's Creed Valhalla</a>
+            <a href="#scrollto4" >4. God Of War</a>
+            <a href="#scrollto5" >5. Cyberpunk 2077</a>
+          </div>
+        </div>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/spl.html">MENTIONS</a>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/buy.html">BUY GAMES</a>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/contact.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+   <h1 id="heading" class="col-12 col-s-12" style="font-size:4vw;"><b>Top 5 Best Looking Games On High-End PCs</b></h1>
+   <img id="img1" src="./headimage.png" class="responsive">
+   <br><br>
+   <font color="white">
+   <p>As video games have continued to grow and evolve as both entertainment and art, the games just keep looking better and better. If someone is playing on a high-end PC or the average console, it's hard not to notice when a game stands out a bit more than the rest.</p>
+
+   <p>Whether it is the highest fidelity graphics or just a gorgeous art style (or both), games that look good usually also play well. If that much time gets spent in the graphics department they must have something good elsewhere. Here are the games with the best graphics out there.</p>
+
+   <p>The recent release of the PS5 and Xbox One Series X|S has once again brought the conversation of consoles vs PC back to the forefront of the gaming industry. The pros and cons can be debated for hours, but there's one indisputable benefit of playing on PC. If someone has the funds to afford the high-end hardware, PC gaming provides the best visual and graphical performance around.</p>
+</font>
+
+<div class="mid col-s-12 col-8">
+    <font color="white">
+    <div>
+        <br><br><br><br><br><br><br>
+        <div id="scrollto5" class="sideimg">5</div>
+        <span id="subhead"  align="right" >Cyberpunk 2077</span>
+        <img src="./cyber.jpg" class="pic" style="width:100%;">
+        <br><br>
+        <p id="p"><a href="https://www.cyberpunk.net/in/en/" target="_blank" style="color:blue; font-size:4vw; ">Cyberpunk 2077</a>, developed by CD Projekt Red, is renowned for its groundbreaking graphics that transport players to a dystopian future. The game features a meticulously crafted open-world environment called Night City, a sprawling metropolis with towering skyscrapers and neon-lit alleyways. The attention to detail in architecture, street life, and vehicle design is exceptional, immersing players in a vibrant cyberpunk universe. Character models are incredibly lifelike, with realistic facial expressions and animations that enhance the storytelling. </p><p id="p">Dynamic weather and lighting effects contribute to the immersive atmosphere, creating a believable and ever-changing cityscape. From gleaming corporate offices to gritty, crime-ridden neighborhoods, each district showcases distinct visual aesthetics. Cyberpunk 2077's graphics push the boundaries of visual storytelling, delivering a visually captivating and immersive experience that captivates players and sets new standards for open-world role-playing games.</p><br><br>
+        
+        <video id="video" autoplay muted controls>
+            <source src="./cyber1.mp4" type="video/mp4">
+        </video><br><br>
+    </div>
+
+      <br><br><br><br><br><br><br>
+       <div id="scrollto4" class="sideimg">4</div>
+       <span id="subhead" align = "right">God Of War</span>
+      <img src="./gow.jpg" class="pic"> <br><br>
+      <p id="p"><a href="https://www.playstation.com/en-us/god-of-war/" target="_blank" style = "color : blue;">God of War</a>The level of detail in character models is awe-inspiring, with Kratos' grizzled visage and Atreus' innocent expressions rendered flawlessly. These lifelike characters, coupled with seamless animations, breathe life into the narrative, immersing players in an emotionally charged odyssey.
+
+The environments of "God of War" are nothing short of breathtaking. From the lush greens of the untamed wilderness to the icy cold of the mountains, each locale is a visual feast. The art direction and use of lighting techniques create atmospheres that draw players deeper into the game's world.
+
+<p id="p">A standout feature is the game's ability to transition seamlessly between gameplay and cutscenes, blurring the lines between playing and watching a cinematic experience. This continuity enhances the sense of immersion, making players feel like they are part of an epic cinematic adventure.
+
+The game's visual excellence extends to improved performance on the PlayStation 4 Pro and PlayStation 5. With higher resolution, smoother frame rates, and reduced loading times, "God of War" offers players an even more visually captivating experience on these platforms.</p>
+
+<p id="p">"God of War" stands as a testament to the artistry and technical prowess of the development team. Its awe-inspiring graphics and attention to detail have set a new standard for visual storytelling in video games, solidifying its place as one of the best-looking games of its time and a true work of art in the gaming industry.</p>
+<br><br>
+<video id="video" autoplay muted controls>
+      	<source src="./gow2.mp4" type="video/mp4"></source>
+      </video><br><br>
+
+      <br><br><br><br><br><br><br>
+       <div id="scrollto3" class="sideimg">3</div>
+       <span id="subhead" align = "right">Assassin's Creed Valhalla</span>
+       <img src="./acv.jpg" class="pic">
+       <p id="p"><a href="https://www.ubisoft.com/en-gb/game/assassins-creed/valhalla" target="_blank" style = "color : blue;">Assassin's Creed Valhalla</a> sets a new standard for visual excellence in the gaming industry. The graphics in this Viking epic are nothing short of breathtaking. From the vast and picturesque landscapes of medieval England and Norway to the intricately designed Viking settlements, every detail is meticulously crafted. The game's graphics showcase an impressive level of realism, as evidenced by the stunning architecture, lush forests, and icy mountains. Character models are incredibly lifelike, with detailed facial expressions and fluid animations that add depth to the storytelling.</p>
+
+<p id="p">The attention to historical accuracy is remarkable, as the game faithfully recreates the armor, weaponry, and clothing of the Viking era. The dynamic weather and lighting effects further enhance the immersive experience, making the world feel alive and ever-changing. Seamless transitions between cutscenes and gameplay contribute to the cinematic quality of the graphics, making players feel like they are part of an epic Viking saga. Assassin's Creed Valhalla's graphics are a masterpiece, elevating the overall gaming experience and setting a new benchmark for open-world action-adventure games.</p>
+
+<br><br>
+<video id="video" autoplay muted controls>
+      	<source src="./acv1.mp4" type="video/mp4"></source>
+      </video><br><br>
+ <br><br><br><br><br><br><br>
+       <div id="subheadbor">
+
+       <div id="scrollto2"class="sideimg" align="left">2</div>
+       <span id="subhead" align = "right">Red Dead Redemption 2</span>
+      <img src="./rdr.jpg" class="pic"></div>
+      <br><br>
+      <p id="p"> <a href="https://www.rockstargames.com/reddeadredemption2/restricted-content/agegate/form?redirect=https%3A%2F%2Fwww.rockstargames.com%2Freddeadredemption2%2F&options=&locale=en_us	" target="_blank" style = "color : blue;">Red Dead Redemption 2's</a>world features different landscapes with occasional travelers, bandits, and wildlife, and urban settlements ranging from farmhouses to towns and cities.[8][9] Horses are the main forms of transportation, of which there are various breeds with different attributes. The player can steal horses and must train or tame wild horses to use them; to own a horse, they must saddle or stable it. Repeated use of a horse begins a bonding process, increased by leading, petting, cleaning, and feeding it, and the player will acquire advantages as they ride their horse.</p><p id="p">[10] Stagecoaches and trains can be used to travel; the player can hijack a train or stagecoach by threatening the driver and rob its contents or passengers.[11][12] The player may witness or partake in random events in the world, including ambushes, crimes, pleas for assistance, ride-by shootings, public executions, and animal attacks. They may be rewarded when helping others.</p><p id="p">[10][13] They may partake in side activities, including tasks with companions and strangers, dueling, bounty hunting, searching for collectibles such as rock carvings, and playing poker, blackjack, dominoes, and five finger filet.[14] Hunting animals provides food, income, and materials for crafting items. The choice of weapon and shot placement affect the quality and value of meat and pelt, and the player can skin the animal or carry the carcass, which will rot over time, decrease its value, and attract predators.[15][16]
+
+</p>
+<video id="video" autoplay muted controls>
+      	<source src="./rdr2.mp4" type="video/mp4"></source>
+      </video><br><br>
+      
+
+       <div id="subheadbor">
+       <div id="scrollto1" class="sideimg" align="center" >1</div>
+       <span id="subhead" align = "right">The Witcher</span>
+       </div>
+      	<img src="./witcher.jpg" class="pic">
+
+      	<br><br>
+      	<p id="p"><a href="https://www.thewitcher.com/in/en/witcher3" target="_blank" style = "color : blue;">The Witcher 3 </a>is the multi-award-winning 2015 sequel to the second game in the series. In this open-world, single-player game, you play as Geralt of Rivia, the protagonist and monster hunter known as a witcher, searching for his missing daughter Ciri who is being sought for her magical abilities by the powerful riders of the Wild Hunt.</p>
+
+<p id="p">The Witcher 3: Wild Hunt is a visual triumph set in the fantasy world of the Continent - complete with humans, elves, dwarves, werewolves, and other monsters and creatures - but based on real-life northern and central Europe.</p>
+
+<p id="p">You’ll play through stunning vistas that include the snow-capped, darkly forested, windswept, and Viking-settled Skellige Isles. In the metropolitan, richly detailed Novigrad, you’ll experience a medieval city complete with thatched-roof cottages and brick-layered shops juxtaposed with impressive-looking castles. All this is authentically fortified behind a walled city. When you’re in Velen or No Man’s Land, you’ll be travelling through creepy, war-torn, and heavily overgrown swamps infested with human villagers and other creatures.</p>
+
+<p id="p" style="float: left;">There is a vibrancy to and details within all of these worlds that feels authentic to the locations that they’re based on as well as the period. It’s a beautifully rendered game overall, enjoyed as one of the top high graphics games for your PC</p>
+<br><br>
+<video id="video" autoplay muted controls>
+	<source src="./wit.mp4" type="video/mp4">
+</video>
+</div>
+</body>
+</html>

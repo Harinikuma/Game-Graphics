@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Graphics</title>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #141414;
+    }
+    #logo {
+  height: 100px;
+  width: 110px; /* Allow the width to adjust proportionally */
+  margin-top: 10px;
+}
+
+#head {
+  max-width: 100%; /* Ensure the header image doesn't exceed its container */
+  height: 110px; /* Allow the height to adjust proportionally */
+}
+
+    #heading {
+      font-family: sans-serif;
+      font-size: 45px;
+      color: white;
+      text-align: left;
+      padding-top: 30px;
+      padding-left: 200px;
+      font-weight: 30;
+    }
+
+    /* Style the dropdown content (hidden by default) */
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+   
+      padding: 10px;
+    }
+
+    /* Show the dropdown content when the dropdown link is hovered */
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Style the list items in the dropdown */
+    nav .dropdown-content a {
+      display: block;
+      color: white;
+      background-color: ;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    /* Change the background color of the selected item in the dropdown */
+    nav .dropdown-content a:hover {
+      background-color: #141414;
+    }
+    #subheadbor{
+  
+  display: inline;
+}
+#ps{
+  height: 150px;
+  margin-top: 30px;
+}
+#buy{
+  padding-left: 200px;
+}
+  .bordered-text {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+  }
+  #logo-container {
+  text-align: center; /* Center the content horizontally */
+}
+  [class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+[class*="col-"] {
+  width: 100%;
+  padding-top:5px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Your styles for screens less than 768px wide go here */
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 17px;
+    margin: 0 15px;
+  }
+  div.eg {
+    display: none;
+  }
+  .topbar {
+    width: 100%;
+    height: auto;
+  }
+  .col-3-9 {
+    width: 100%;
+    padding-left: 0;
+  }
+  .mid {
+    width: 100%;
+    margin-left: 0;
+    overflow: auto;
+  }
+  .pic {
+    height: auto;
+    width: 100%;
+    /* max-width: 100%; */ /* You can remove this line if not needed */
+  }
+  .navbar {
+    height: auto;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#p{
+	font-size:3vw;
+	}
+  /* For small screens (less than 768px wide): */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+
+@media only screen and (min-width: 768px) {
+.mid{
+width: 70%; 
+margin-left: 250px; 
+overflow: auto;
+}
+/*.topbar {
+    	margin: 0;
+  ss  	padding: 0;
+      height: 150px;
+      width: 100%;
+      background-color: black;
+      }*/
+
+.pic{
+	height: 500px;
+	width: 1000px;
+	max-width: 100%;
+}
+.navbar {
+      height: 40px;
+      width: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+	nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: sans-serif;
+      font-size: 17px;
+      margin: 0 25px;
+    }
+	#p{
+	font-size:20px;
+	}
+
+#head {
+  max-width: 100%; /* Ensure the header image doesn't exceed its container */
+  height: 110px; /* Allow the height to adjust proportionally */
+}
+  /* For desktop: */
+    .col-1 {width: 0;}
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+</style>
+</head>
+
+<body>
+  <header>
+  <div class="topbar col-s-12">
+    <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">
+      <div id="logo-container">
+        <img src="./logo.png" id="logo" alt="Logo">
+        <img src="./head.png" id="head" alt="Header Image">
+      </div>
+    </a>
+  </div>
+  <div class="col-12 navbar">
+    <nav>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">HOME</a>
+        <div class="dropdown">
+          <a href="#file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/mini.html">GAMES</a>
+          <div class="dropdown-content">
+            <a href="#scrollto1" >1. The Witcher</a>
+            <a href="#scrollto2" >2. Red Dead Redemption 2</a>
+            <a href="#scrollto3" >3. Assassin's Creed Valhalla</a>
+            <a href="#scrollto4" >4. God Of War</a>
+            <a href="#scrollto5" >5. Cyberpunk 2077</a>
+          </div>
+        </div>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/spl.html">MENTIONS</a>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/buy.html">BUY GAMES</a>
+        <a href="file:///C:/Users/gopik/OneDrive/Desktop/project/mini%20project/contact.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+  <font color="white">
+<div class="mid col-s-12 col-8" >
+    <img src="./ps.png" id="ps" align="left">
+    <h1 id="heading">The Witcher 3<h1>
+      <div id="buy">
+      <a href="https://www.playstation.com/en-in/games/the-witcher-3-wild-hunt/" target=_blank><span class="bordered-text">Buy Now</span></a>
+    </div>
+<br><br>
+    <img src="./ps.png" id="ps" align="left">
+    <h1 id="heading">Red Dead Redemption 2<h1>
+      <div id="buy">
+       <a href="https://www.playstation.com/en-in/games/red-dead-redemption-2/" target=_blank><span class="bordered-text">Buy Now</span></a>
+    </div>
+<br><br>
+    <img src="./ps.png" id="ps" align="left">
+    <h1 id="heading">Assassin's Creed Valhalla<h1>
+      <div id="buy">
+      <a href="https://www.playstation.com/en-in/games/assassins-creed-valhalla/" target=_blank><span class="bordered-text">Buy Now</span></a>
+    </div>
+<br><br>
+    <img src="./ps.png" id="ps" align="left">
+    <h1 id="heading">God of War<h1>
+      <div id="buy">
+            <a href="https://www.playstation.com/en-in/games/god-of-war/" target=_blank><span class="bordered-text">Buy Now</span></a>
+    </div>
+<br><br>
+    <img src="./ps.png" id="ps" align="left">
+    <h1 id="heading">Cyberpunk 2077<h1>
+      <div id="buy">
+      <a href="https://www.playstation.com/en-in/games/cyberpunk-2077/" target=_blank><span class="bordered-text">Buy Now</span></a>
+    </div>
+<br><br>
+    <img src="./ps.png" id="ps" align="left">
+    <h1 id="heading">Grand theft auto 5<h1>
+      <div id="buy">
+            <a href="https://www.playstation.com/en-in/games/grand-theft-auto-v/" target=_blank><span class="bordered-text">Buy Now</span></a>
+    </div><br><br>
+
+    <img src="./ps.png" id="ps" align="left">
+    <h1 id="heading">Shadows of Tomb Raider<h1>
+      <div id="buy">
+            <a href="https://store.playstation.com/en-in/product/EP0082-CUSA10872_00-DEFINITIVE00SIEE" target=_blank><span class="bordered-text">Buy Now</span></a>
+    </div>
+<br><br>
+    <img src="./ps.png" id="ps" align="left">
+    <h1 id="heading">Far Cry 5<h1>
+      <div id="buy">
+            <a href="https://www.playstation.com/en-in/games/far-cry-5/" target=_blank><span class="bordered-text">Buy Now</span></a>
+    </div>
+  </div>
+<script>
+cart(a,b){
+
+}
+</script>
